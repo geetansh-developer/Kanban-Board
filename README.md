@@ -62,3 +62,26 @@ Follow these steps to get your Kanban board up and running:
 -   **View Tasks:** Tasks are displayed in their respective columns, with titles and descriptions readily visible.
 
 ## 📂 Project Structure
+
+kanban-board/
+├── public/
+│   ├── images/
+│   │   └── Logo.png
+│   ├── custom_icons/
+│   │   ├── emai-1.png
+│   │   └── Bell.png
+│   ├── UserProfile.png
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Column.js
+│   │   ├── Header.js
+│   │   ├── KanbanBoard.js
+│   │   ├── Modal.js
+│   │   └── Task.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+├── package.json
+├── package-lock.json
+└── README.md
