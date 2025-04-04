@@ -1,87 +1,70 @@
-# 🚀 Interactive Kanban Board Application
+# Getting Started with Create React App
 
-Welcome to the Interactive Kanban Board Application! This project is a dynamic, React-based Kanban board that empowers you to efficiently manage tasks with drag-and-drop functionality, persistent data storage, and a sleek, user-friendly interface.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
-[![React DnD](https://img.shields.io/badge/React%20DnD-333333?style=for-the-badge&logo=react&logoColor=white)](https://react-dnd.github.io/react-dnd/about)
-[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/motion/)
-[![Lucide React](https://img.shields.io/badge/Lucide%20React-333333?style=for-the-badge&logoColor=white)](https://lucide.dev/)
+## Available Scripts
 
-## ✨ Key Features
+In the project directory, you can run:
 
--   **Drag & Drop Mastery:** Effortlessly move tasks between columns (To Do, In Progress, Completed) with intuitive drag-and-drop interactions.
--   **Task Lifecycle Management:** Add, edit, and manage tasks seamlessly through a user-friendly modal interface.
--   **Data Persistence:** Your tasks are securely stored in Local Storage, ensuring they remain even after browser refreshes.
--   **Smooth Animations:** Experience fluid task transitions and enhanced user interactions with `framer-motion`.
--   **Responsive Design:** Enjoy a consistent, optimized experience across all screen sizes and devices.
--   **Modern UI:** A clean, visually appealing interface inspired by the provided Figma design.
--   **Header Component:** Includes a header with logo, user profile, and notification icons.
+### `npm start`
 
-## 🛠️ Technologies Used
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
--   **React:** The powerful JavaScript library for building user interfaces.
--   **React DnD (react-dnd):** Facilitates drag-and-drop interactions.
--   **React DnD HTML5 Backend (react-dnd-html5-backend):** Enables HTML5 drag-and-drop support.
--   **Framer Motion (framer-motion):** Provides smooth, performant animations.
--   **Lucide React (lucide-react):** A collection of beautiful SVG icons.
--   **Local Storage:** For persistent data storage.
--   **CSS:** For styling and layout.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🚀 Getting Started
+### `npm test`
 
-Follow these steps to get your Kanban board up and running:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1.  **Clone the Repository:**
+### `npm run build`
 
-    ```bash
-    git clone [repository-url]
-    cd [repository-directory]
-    ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2.  **Install Dependencies:**
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-    ```bash
-    npm install
-    ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3.  **Start the Development Server:**
+### `npm run eject`
 
-    ```bash
-    npm start
-    ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-4.  **Open in Browser:**
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-    Visit `http://localhost:3000` in your browser to view the application.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## 🎮 How to Use
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
--   **Add a Task:** Click the "Add Task +" button to open the modal. Fill in the task title and description, then click "Add Task".
--   **Edit a Task:** Click on any task to open the modal for editing. Modify the details and click "Save Task".
--   **Move a Task:** Simply drag and drop tasks between the "To Do," "In Progress," and "Completed" columns.
--   **View Tasks:** Tasks are displayed in their respective columns, with titles and descriptions readily visible.
+## Learn More
 
-## 📂 Project Structure
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-kanban-board/
-├── public/
-│   ├── images/
-│   │   └── Logo.png
-│   ├── custom_icons/
-│   │   ├── emai-1.png
-│   │   └── Bell.png
-│   ├── UserProfile.png
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Column.js
-│   │   ├── Header.js
-│   │   ├── KanbanBoard.js
-│   │   ├── Modal.js
-│   │   └── Task.js
-│   ├── App.js
-│   ├── index.js
-│   └── styles.css
-├── package.json
-├── package-lock.json
-└── README.md
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

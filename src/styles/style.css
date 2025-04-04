@@ -1,0 +1,346 @@
+body {
+  margin: 0;
+  background: #f5f5f5;
+  font-family: 'Inter';
+}
+
+* {
+  font-family: 'Inter';
+}
+
+.kanban-header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .kanban-header {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
+
+.logo img {
+  height: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.user-profile {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-role {
+  font-size: 12px;
+  font-weight: 400;
+  color: #959BA3;
+}
+
+.kanban-board {
+  background: #f5f5f5;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.add-task-button {
+  margin: 20px;
+  padding: 8px 16px 8px 20px;
+  background-color: #F66135;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  width: 151px;
+  height: 48px;
+  cursor: pointer;
+  gap: 10px;
+  display: block;
+}
+
+.kanban-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.kanban-column {
+  flex: 1;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .kanban-columns {
+    flex-wrap: nowrap;
+  }
+  .kanban-column {
+    width: auto;
+  }
+}
+
+.column-header {
+  text-align: left;
+  width: fit-content;
+  color: #17181A;
+  gap: 8px;
+  margin-left: 22px;
+  padding: 4px 12px 4px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.task-card {
+  padding: 12px;
+  margin: 8px 20px;
+  background: white;
+  border-radius: 10px;
+  cursor: grab;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #17181A;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .kanban-columns {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 8px;
+    flex-wrap: nowrap;
+  }
+
+  .kanban-column {
+    flex: 1 0 33.33%;
+    flex-shrink: 0;
+    padding: 15px;
+    min-height: auto;
+    box-sizing: border-box;
+    min-width: 200px;
+  }
+
+  .column-header {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  .task-card {
+    margin: 8px 8px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 150px;
+  }
+
+  .add-task-button, .modal-button {
+    width: auto;
+    height: auto;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .add-task-button, .modal-button {
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 15px;
+  }
+}
+
+.task-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+
+.column-header-border {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #17181A;
+  line-height: 28px;
+  margin: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #999;
+}
+
+.close-icon:hover {
+  color: #333;
+}
+
+.modal-body {
+  margin-top: 15px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #5C5C5C;
+  line-height: 16px;
+  margin-top: 20px;
+}
+
+.modal-input,
+.modal-textarea {
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #F9F9F9;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border-radius: 4px;
+  gap: 10px;
+  padding: 4px 14px;
+}
+
+.modal-textarea {
+  height: 131px;
+  padding: 4px 14px;
+  resize: none;
+}
+
+.modal-footer {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.modal-button {
+  background-color: #F66135;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 8px 16px 8px 20px;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 151px;
+  height: 48px;
+}
+
+@media (max-width: 767px) {
+  .modal-button {
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 10px;
+  }
+}
+
+.modal-button:hover {
+  background-color: #F66135;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
